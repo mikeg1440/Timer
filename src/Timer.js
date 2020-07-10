@@ -17,11 +17,19 @@ class Timer extends Component {
     form.style.display = 'block';
   }
 
+  formCallback = (hour, min, sec) => {
+    this.setState({
+      hours: hour,
+      minutes: min,
+      seconds: sec
+    })
+  }
+
   render() {
     return (
       <div>
-        <TimeForm hours={this.state.hours} minutes={this.state.minutes} seconds={this.state.seconds} />
-        <h2 className='timer-text'>{this.state.minutes}:{this.state.seconds}</h2>
+        <TimeForm hours={this.state.hours} minutes={this.state.minutes} seconds={this.state.seconds} callback={this.formCallback} />
+        <h2 className='timer-text'>{this.state.hours}:{this.state.minutes}:{this.state.seconds}</h2>
         <button>Start</button>
         <button onClick={() => this.showForm()}>Set Time</button>
         <button>Reset</button>
