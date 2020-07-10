@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/mikeg1440/Timer/static/css/main.5f361e03.chunk.css",
+    "main.js": "/mikeg1440/Timer/static/js/main.ccf870a2.chunk.js",
+    "main.js.map": "/mikeg1440/Timer/static/js/main.ccf870a2.chunk.js.map",
+    "runtime-main.js": "/mikeg1440/Timer/static/js/runtime-main.e183e140.js",
+    "runtime-main.js.map": "/mikeg1440/Timer/static/js/runtime-main.e183e140.js.map",
+    "static/js/2.c74250db.chunk.js": "/mikeg1440/Timer/static/js/2.c74250db.chunk.js",
+    "static/js/2.c74250db.chunk.js.map": "/mikeg1440/Timer/static/js/2.c74250db.chunk.js.map",
+    "index.html": "/mikeg1440/Timer/index.html",
+    "precache-manifest.b2eb14453b5b54bdc32b81c59f67a9ec.js": "/mikeg1440/Timer/precache-manifest.b2eb14453b5b54bdc32b81c59f67a9ec.js",
+    "service-worker.js": "/mikeg1440/Timer/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/mikeg1440/Timer/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.c74250db.chunk.js.LICENSE.txt": "/mikeg1440/Timer/static/js/2.c74250db.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/mikeg1440/Timer/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e183e140.js",
+    "static/js/2.c74250db.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.ccf870a2.chunk.js"
+  ]
+}
