@@ -10,20 +10,27 @@ class TimeForm extends Component {
     }
   }
 
+  handleChange = (e) => {
+    const {name, value} = e.target;
+    this.setState({
+      [name]: value
+    })
+  }
+
   render() {
     return (
       <div className='modal' id='time-form'>
         <form className='modal-content'>
           <label>Hours</label>
-          <input type='text' value={this.state.hours} />
+          <input onChange={this.handleChange} name='hours' type='text' value={this.state.hours} />
           <br />
 
           <label>Minutes</label>
-          <input type='text' value={this.state.minutes} />
+          <input onChange={this.handleChange} name='minutes' type='text' value={this.state.minutes} />
           <br />
 
           <label>Seconds</label>
-          <input type='text' value={this.state.seconds} />
+          <input onChange={this.handleChange} name='seconds' type='text' value={this.state.seconds} />
           <br />
 
           <button type='submit'>Set Timer</button>
