@@ -10,6 +10,13 @@ class TimeForm extends Component {
     }
   }
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const {hours, minutes, seconds} = this.state;
+    this.props.callback(hours, minutes, seconds);
+    e.target.parentElement.style.display = 'none';
+  }
+
   handleChange = (e) => {
     const {name, value} = e.target;
     this.setState({
@@ -20,7 +27,7 @@ class TimeForm extends Component {
   render() {
     return (
       <div className='modal' id='time-form'>
-        <form className='modal-content'>
+        <form className='modal-content' onSubmit={this.handleSubmit}>
           <label>Hours</label>
           <input onChange={this.handleChange} name='hours' type='text' value={this.state.hours} />
           <br />
