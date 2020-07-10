@@ -1,3 +1,11 @@
+
+/* Custom classes */
+
+.timer-text {
+  border: 1px solid blue;
+  font-size: 10rem;
+}
+
 .App {
   text-align: center;
 }
