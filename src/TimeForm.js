@@ -13,6 +13,21 @@ class TimeForm extends Component {
   render() {
     return (
       <div className='modal' id='time-form'>
+        <form className='modal-content'>
+          <label>Hours</label>
+          <input type='text' value={this.state.hours} />
+          <br />
+
+          <label>Minutes</label>
+          <input type='text' value={this.state.minutes} />
+          <br />
+
+          <label>Seconds</label>
+          <input type='text' value={this.state.seconds} />
+          <br />
+
+          <button type='submit'>Set Timer</button>
+        </form>
       </div>
     );
   }
