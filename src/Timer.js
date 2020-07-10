@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import TimeForm from './TimeForm';
+
 class Timer extends Component {
   constructor(props){
     super(props)
@@ -8,9 +10,17 @@ class Timer extends Component {
       seconds: 0
     }
   }
+
+  showForm = () => {
+    let form = document.querySelector('#time-form');
+
+    form.style.display = 'block';
+  }
+
   render() {
     return (
       <div>
+        <TimeForm hours={this.state.hours} minutes={this.state.minutes} seconds={this.state.seconds} />
         <h2 className='timer-text'>{this.state.minutes}:{this.state.seconds}</h2>
         <button>Start</button>
         <button onClick={() => this.showForm()}>Set Time</button>
