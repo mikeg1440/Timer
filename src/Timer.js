@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Countdown from 'react-countdown';
 import TimeForm from './TimeForm';
 
 class Timer extends Component {
@@ -34,12 +35,16 @@ class Timer extends Component {
 
   render() {
     return (
-      <div>
-        <TimeForm hours={this.state.hours} minutes={this.state.minutes} seconds={this.state.seconds} callback={this.formCallback} />
-        <h2 className='timer-text'>{this.state.hours}:{this.state.minutes}:{this.state.seconds}</h2>
-        <button>Start</button>
-        <button onClick={() => this.showForm()}>Set Time</button>
-        <button>Reset</button>
+      <div className='display-container'>
+        <div className='control-container'>
+          <TimeForm hours={this.state.hours} minutes={this.state.minutes} seconds={this.state.seconds} callback={this.formCallback} />
+          <button className='control-btn' onClick={() => this.startTimer()}>Start</button>
+          <button className='control-btn' onClick={() => this.showForm()}>Set Time</button>
+          <button className='control-btn'>Reset</button>
+        </div>
+        <div className='timer-text'>
+          <Countdown date={Date.now() + (5000 + this.convertToSeconds())} autoStart='true' />
+        </div>
       </div>
     );
   }
