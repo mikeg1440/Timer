@@ -17,6 +17,13 @@ class Timer extends Component {
     form.style.display = 'block';
   }
 
+  convertToSeconds = () => {
+    let seconds = parseInt(this.state.seconds);
+    seconds += parseInt(this.state.minutes * 60);
+    seconds += parseInt(this.state.hours * 3600);
+    return seconds;
+  }
+
   formCallback = (hour, min, sec) => {
     this.setState({
       hours: hour,
