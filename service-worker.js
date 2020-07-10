@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/mikeg1440/Timer/precache-manifest.b2eb14453b5b54bdc32b81c59f67a9ec.js"
+  "/mikeg1440/Timer/precache-manifest.31fef0d0154b0cc44c9f8500e916c3eb.js"
 );
 
 self.addEventListener('message', (event) => {
