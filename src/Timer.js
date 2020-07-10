@@ -11,6 +11,10 @@ class Timer extends Component {
   render() {
     return (
       <div>
+        <h2 className='timer-text'>{this.state.minutes}:{this.state.seconds}</h2>
+        <button>Start</button>
+        <button onClick={() => this.showForm()}>Set Time</button>
+        <button>Reset</button>
       </div>
     );
   }
