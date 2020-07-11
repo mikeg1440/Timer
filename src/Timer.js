@@ -19,10 +19,12 @@ class Timer extends Component {
   }
 
   convertToSeconds = () => {
-    let seconds = parseInt(this.state.seconds);
-    seconds += parseInt(this.state.minutes * 60);
-    seconds += parseInt(this.state.hours * 3600);
-    return seconds;
+    const {seconds, minutes, hours} = this.state;
+    let total = parseInt(seconds);
+    if (minutes != 0) total += parseInt(minutes * 60);
+    if (hours != 0) total += parseInt(hours * 3600);
+    debugger
+    return total;
   }
 
   formCallback = (hour, min, sec) => {
@@ -31,6 +33,10 @@ class Timer extends Component {
       minutes: min,
       seconds: sec
     })
+  }
+
+  startTimer = () => {
+
   }
 
   render() {
@@ -43,7 +49,7 @@ class Timer extends Component {
           <button className='control-btn'>Reset</button>
         </div>
         <div className='timer-text'>
-          <Countdown date={Date.now() + (5000 + this.convertToSeconds())} autoStart='true' />
+          <Countdown date={Date.now() + (1000 * this.convertToSeconds())} autoStart='true' />
         </div>
       </div>
     );
