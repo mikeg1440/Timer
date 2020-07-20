@@ -16,13 +16,11 @@ button.silence-btn {
 }
 
 .control-container {
-  border: 1px solid yellow;
   display: flex;
   justify-content: space-around;
 }
 
 .timer-text {
-  border: 1px solid blue;
   font-size: 10rem;
   color: #00ff2b;
 }
@@ -58,6 +56,10 @@ button.silence-btn {
   margin: 1rem;
   text-align: center;
   padding: 5px;
+  /* button.silence-btn {
+    background-color: red;
+    display: none;
+  } */
   font-size: 1rem;
   font-weight: bold;
 }
