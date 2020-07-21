@@ -21,8 +21,8 @@ class Timer extends Component {
   convertToSeconds = () => {
     const {seconds, minutes, hours} = this.state;
     let total = parseInt(seconds);
-    if (minutes != 0) total += parseInt(minutes * 60);
-    if (hours != 0) total += parseInt(hours * 3600);
+    if (minutes !== 0) total += parseInt(minutes * 60);
+    if (hours !== 0) total += parseInt(hours * 3600);
     return total;
   }
 
