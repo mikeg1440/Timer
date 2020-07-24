@@ -49,6 +49,9 @@ class Timer extends Component {
 
   stopBeep = () => {
     if (this.state.beepId) clearInterval(this.state.beepId)
+    this.setState({
+      alarm: false
+    })
   }
 
   resetCountdown = () => {
@@ -62,7 +65,7 @@ class Timer extends Component {
       <div className='display-container'>
         <div className='control-container'>
           <TimeForm hours={this.state.hours} minutes={this.state.minutes} seconds={this.state.seconds} callback={this.formCallback} />
-          <button className='control-btn' onClick={() => this.startTimer()}>Start</button>
+          {/* <button className='control-btn' onClick={() => this.startTimer()}>Start</button> */}
           <button className='control-btn' onClick={() => this.showForm()}>Set Time</button>
           <button className='control-btn' onClick={() => this.resetCountdown()}>Reset</button>
         </div>
