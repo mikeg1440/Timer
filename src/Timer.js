@@ -40,6 +40,12 @@ class Timer extends Component {
     beep.play();
   }
 
+  startBeep = () => {
+    let beepId = setInterval(() => this.beep(), 100);
+    this.setState({
+      beepId: beepId
+    })
+  }
   }
 
   render() {
