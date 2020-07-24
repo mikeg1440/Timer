@@ -50,6 +50,10 @@ class Timer extends Component {
     if (this.state.beepId) clearInterval(this.state.beepId)
   }
 
+  resetCountdown = () => {
+    this.forceUpdate();
+  }
+
   render() {
     return (
       <div className='display-container'>
