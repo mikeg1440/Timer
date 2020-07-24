@@ -61,7 +61,7 @@ class Timer extends Component {
           <TimeForm hours={this.state.hours} minutes={this.state.minutes} seconds={this.state.seconds} callback={this.formCallback} />
           <button className='control-btn' onClick={() => this.startTimer()}>Start</button>
           <button className='control-btn' onClick={() => this.showForm()}>Set Time</button>
-          <button className='control-btn'>Reset</button>
+          <button className='control-btn' onClick={() => this.resetCountdown()}>Reset</button>
         </div>
         <div className='timer-text'>
           <Countdown date={Date.now() + (1000 * this.convertToSeconds())} autoStart='true' onComplete={this.startBeep} />
