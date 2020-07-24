@@ -46,6 +46,9 @@ class Timer extends Component {
       beepId: beepId
     })
   }
+
+  stopBeep = () => {
+    if (this.state.beepId) clearInterval(this.state.beepId)
   }
 
   render() {
