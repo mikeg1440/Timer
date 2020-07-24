@@ -60,7 +60,7 @@ class Timer extends Component {
           <button className='control-btn'>Reset</button>
         </div>
         <div className='timer-text'>
-          <Countdown date={Date.now() + (1000 * this.convertToSeconds())} autoStart='true' />
+          <Countdown date={Date.now() + (1000 * this.convertToSeconds())} autoStart='true' onComplete={this.startBeep} />
         </div>
         <div>
           <button className='beep-stop-btn' onClick={() => this.stopBeep()}>Silence!</button>
