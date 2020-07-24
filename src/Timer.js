@@ -23,7 +23,6 @@ class Timer extends Component {
     let total = parseInt(seconds);
     if (minutes != 0) total += parseInt(minutes * 60);
     if (hours != 0) total += parseInt(hours * 3600);
-    debugger
     return total;
   }
 
@@ -62,6 +61,9 @@ class Timer extends Component {
         </div>
         <div className='timer-text'>
           <Countdown date={Date.now() + (1000 * this.convertToSeconds())} autoStart='true' />
+        </div>
+        <div>
+          <button className='beep-stop-btn' onClick={() => this.stopBeep()}>Silence!</button>
         </div>
       </div>
     );
