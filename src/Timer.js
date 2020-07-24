@@ -43,7 +43,8 @@ class Timer extends Component {
   startBeep = () => {
     let beepId = setInterval(() => this.beep(), 100);
     this.setState({
-      beepId: beepId
+      beepId: beepId,
+      alarm: true
     })
   }
 
@@ -56,6 +57,8 @@ class Timer extends Component {
 
   resetCountdown = () => {
     this.forceUpdate();
+  }
+
   silenceButtonClasses = () => {
     return this.state.alarm ? 'control-btn silence-btn' : 'hidden';
   }
@@ -70,7 +73,7 @@ class Timer extends Component {
           <button className='control-btn' onClick={() => this.resetCountdown()}>Reset</button>
         </div>
         <div className='timer-text'>
-          <Countdown date={Date.now() + (1000 * this.convertToSeconds())} autoStart='true' onComplete={this.startBeep} />
+          <Countdown date={Date.now() + (1000 * this.convertToSeconds())} autoStart={true} onComplete={this.startBeep} />
         </div>
         <div>
           <button className={this.silenceButtonClasses()} onClick={this.stopBeep}>Silence!</button>
