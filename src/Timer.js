@@ -30,7 +30,8 @@ class Timer extends Component {
     this.setState({
       hours: hour,
       minutes: min,
-      seconds: sec
+      seconds: sec,
+      alarm: false
     })
   }
 
