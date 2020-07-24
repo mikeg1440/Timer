@@ -51,6 +51,11 @@ button.control-btn {
   font-size: 1rem;
   font-weight: bold;
 }
+
+.modal-content label {
+  font-weight: bold;
+}
+
 /* The Close Button */
 .close {
   color: #aaa;
