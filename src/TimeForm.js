@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 
 class TimeForm extends Component {
   constructor(props){
@@ -8,13 +8,14 @@ class TimeForm extends Component {
       minutes: props.minutes,
       seconds: props.seconds
     }
+    this.formRef = createRef();
   }
 
   handleSubmit = (e) => {
     e.preventDefault();
     const {hours, minutes, seconds} = this.state;
     this.props.callback(hours, minutes, seconds);
-    e.target.parentElement.style.display = 'none';
+    this.formRef.current.style.display = 'none';
   }
 
   handleChange = (e) => {
@@ -24,10 +25,17 @@ class TimeForm extends Component {
     })
   }
 
+  handleClose = (e) => {
+    debugger
+    this.formRef.current.style.display = 'none';
+  }
+
   render() {
     return (
-      <div className='modal' id='time-form'>
+      <div className='modal' id='time-form' ref={this.formRef}>
         <form className='modal-content' onSubmit={this.handleSubmit}>
+          <div className='close-btn' onClick={this.handleClose}>X</div>
+
           <label>Hours</label>
           <input onChange={this.handleChange} name='hours' type='text' value={this.state.hours} />
           <br />
