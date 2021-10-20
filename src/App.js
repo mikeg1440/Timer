@@ -5,7 +5,7 @@ import Timer from './Timer';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" styles={appStyles}>
       <div className="app-container">
         <h1>Simple Countdown Timer</h1> 
         <Timer />
@@ -16,3 +16,9 @@ function App() {
 }
 
 export default App;
+
+const appStyles = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center'
+}
