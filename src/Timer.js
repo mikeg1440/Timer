@@ -10,6 +10,8 @@ class Timer extends Component {
       minutes: 5,
       seconds: 0
     }
+    
+    this.clockRef = React.createRef();
   }
 
   showForm = () => {
@@ -56,12 +58,16 @@ class Timer extends Component {
   }
 
   resetCountdown = () => {
-    this.forceUpdate();
+
+    this.setState({});
+
+    this.clockRef.current.api.start();
   }
 
   silenceButtonClasses = () => {
     return this.state.alarm ? 'control-btn silence-btn' : 'hidden';
   }
+
 
   render() {
     return (
@@ -73,7 +79,7 @@ class Timer extends Component {
           <button className='control-btn' onClick={() => this.resetCountdown()}>Reset</button>
         </div>
         <div className='timer-text'>
-          <Countdown date={Date.now() + (1000 * this.convertToSeconds())} autoStart={true} onComplete={this.startBeep} />
+        <Countdown date={Date.now() + (1000 * this.convertToSeconds())} autoStart={true} onComplete={this.startBeep} ref={this.clockRef} />
         </div>
         <div>
           <button className={this.silenceButtonClasses()} onClick={this.stopBeep}>Silence!</button>
