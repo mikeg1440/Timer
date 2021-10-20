@@ -54,6 +54,16 @@ button.silence-btn {
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
+.close-btn {
+  position: relative;
+  float: right;
+}
+
+.close-btn:hover {
+  cursor: pointer;
+  color: red;
+}
+
 /* Modal Content/Box */
 .modal-content {
   background-color: #134e80f0;
